@@ -36,7 +36,7 @@ def demo() -> None:
     call_response = first_app_client.call(
         select_math.do_math,
         calculator_application=second_app_client.app_id,
-        method=calculator.add.method_signature,
+        calc_app_method_sig=calculator.add.method_signature(),
         a=1,
         b=2,
         suggested_params=sp,
